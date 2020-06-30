@@ -1,0 +1,88 @@
+[Connection]
+relay_ip = localhost
+relay_port = 14900
+remote_ip = loginclassic1.graalonline.com
+remote_port = 14896
+initial_login_server = U Login Classic iPhone
+
+//remote_ip = loginera1.graalonline.com
+//remote_port = 14900
+//initial_login_server = U Login Era iPhone
+
+[Client]
+subscription = gold,classic
+version = G3D29090
+platform = iphone
+unknown = 
+md5_1 = 
+md5_2 = 
+os = 10.4.0  Darwin Kernel Version 10.4.0: Wed Oct 20 20:06:26 PDT 2010; root:xnu-1504.58.28~3/RELEASE_ARM_S5L8720X
+
+[Seed]
+unknown = 
+md5_1 = $rand
+md5_2 = $rand
+
+[ClientProps]
+ostype = iphone
+
+[Security]
+allow_unsafe_commands = false
+
+[Debug]
+dump_weapons = false
+dump_packets = false
+
+[Server: Login]
+blocked_weapons = -Serverlist_Observer
+
+[Server: Zodiac]
+blocked_weapons = +Trial
+
+[Server: U Login Classic iPhone]
+language = en
+block_serverwarp = true
+inject_weapons = -EnableFeatures, -Serverlist, -Serverlist_Chat, -Playerlist
+login_flags = "client.country=us","client.isapple","client.clientversion=6","client.iphonemodel=iPod2,1"
+
+[Server: U Login Era iPhone]
+language = en
+block_serverwarp = true
+inject_weapons = -EnableFeatures, -Serverlist, -Serverlist_Chat, -Playerlist
+login_flags = "client.country=us","client.isapple","client.clientversion=6","client.iphonemodel=iPod2,1"
+blocked_triggerserver = "-GUI/Chat,tempch"
+
+// Era has protection against Windows users connecting as iPhone clients.
+// Either mark yourself as flash or android, or block the -GUI/Chat,tempch triggerserver.
+
+// Noteable flags:
+// client.country=us
+// client.isapple
+// client.virtualkeys=1
+// client.iphonegame=era
+// client.iphonegame=eraplus
+// client.clientversion=6
+// client.usedefaultfont=1
+
+// Era flags:
+// client.createdhouse=1
+// client.options_lesslag=1
+// client.purchased.GraalEra.GuildHousePack1=1
+// client.purchased.GraalEra.Customization1=1
+// client.purchased.GraalEra.CharacterSlotsPack1=1
+// client.purchased.GraalEra.HousePack1=1
+// purchases.GraalEra.GuildHousePack1=1
+// purchases.GraalEra.Customization1=1
+// purchases.GraalEra.CharacterSlotsPack1=1
+// purchased.GraalEra.HousePack1=1
+// client.purchased.GraalEraPlus.GralatsPack1=2
+// client.purchased.GraalEraPlus.GralatsPack2=4
+// furnitures=g,binblue,planth,binblue,wirefenc,giantspaceman,giantspaceman,floorrugusa,floorrugusa,bed,blackbed,shrub,tvlarge,tikitorch,palmtree_right,palmtree_left,palmtree_right,palmtree_left,palmtree_right,speakerbox,books
+// client.AndrewRocks=1
+// client.isAwesome=true
+
+
+// To enable the purchased content, use the /if command to inject the following flags:
+//   /if client.iphonegame=classicplus
+//   /if client.ispremiumversion=1
+//   /if client.purchased.GraalClassic.Customization1=1

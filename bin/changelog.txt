@@ -1,0 +1,41 @@
+--------------------------------------------------------------------------------
+0.2.9
+
+* Set the zlib buffers to 4MB.
+* Updated zlib to version 1.2.8.
+
+
+--------------------------------------------------------------------------------
+0.2.8
+
+* Re-worked the settings and how random seeds are generated to fix problems
+  with connecting to Android clients.
+* Set the zlib buffers to 2MB to potentially fix any decompression errors.
+* Fixed bugs with connecting via RC clients.
+
+
+--------------------------------------------------------------------------------
+0.2.7
+
+* Added the local_ip option for binding the gserver to a specific IP address on
+  the local machine.
+
+
+--------------------------------------------------------------------------------
+0.2.6
+
+* Added the ability to inject GS1 weapons.
+
+
+--------------------------------------------------------------------------------
+0.2.5
+
+* Added the ability to block triggerservers from the client.
+
+
+--------------------------------------------------------------------------------
+0.2.4
+
+* Added relay_ip setting to specify the IP address the relay is running at.
+* Renamed local_port to relay_port for naming consistency.
+* Added chat_commands.cfg so you can modify the commands to control the relay.
